@@ -215,6 +215,16 @@ CODE OUTPUT
 //firstLetterOfFirstName = firstName[0];
 //console.log(firstLetterOfFirstName)
 
-var firstLetterOfLastName = "";
-var lastname = "Lovelace";
+//var firstLetterOfLastName = "";
+//var lastname = "Lovelace";
+//firstLetterOfLastName = [4];
+//console.log(firstLetterOfLastName);
 
+// Bracket Notation to find last character in string
+//var firstName = "Ada";
+//var lastLetterOfFirstName = firstName[firstName.length - 1];
+//console.log(lastLetterOfFirstName);
+
+var firstName = "Adebakin";
+var secondLetterOfFirstName = firstName[firstName.lenght - 6];
+console.log(secondLetterOfFirstName);

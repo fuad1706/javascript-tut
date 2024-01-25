@@ -168,14 +168,14 @@ CODE OUTPUT
 
 //concatenating strings with plus operator
 
-//var myStr = "This is the start. " + "This is the end."
-//console.log(myStr);
+// var myStr = "This is the start. " + "This is the end."
+// console.log(myStr);
 
 //concatenating strings with plus equal operator +=
 
-//var myStr = "This is the first sentence. "
-//myStr += "This is the second sentence. "
-//console.log(myStr);
+// var myStr = "This is the first sentence. "
+// myStr += "This is the second sentence. "
+// console.log(myStr);
 
 //constructive strings with variables
 
@@ -225,6 +225,47 @@ CODE OUTPUT
 //var lastLetterOfFirstName = firstName[firstName.length - 1];
 //console.log(lastLetterOfFirstName);
 
-var firstName = "Adebakin";
-var secondLetterOfFirstName = firstName[firstName.lenght - 6];
-console.log(secondLetterOfFirstName);
+//var firstName = "Adebakin";
+//var secondLetterOfFirstName = firstName[firstName.length - 6];
+//console.log(secondLetterOfFirstName);
+
+// Bracket Notation to find Nth-to-Last Character in String
+
+//var firstName = "Ada";
+//var thirdToLastLetterOfFirstName = firstName[firstName.length - 3];
+//console.log(thirdToLastLetterOfFirstName);
+
+//var lastName = "Lovelace";
+//var secondToLastLetterOfLastName = lastName[lastName.length - 2];
+//console.log(secondToLastLetterOfLastName);
+
+// let myName = "Fuad";
+// let surName = "Adebakin";
+//let fullName = myName + " " + surName;
+//console.log(fullName);
+
+//let myStr = "Understand";
+//console.log(myStr.length);
+
+//Word Blanks
+
+function worldBlanks(myNoun, myAdjective, myVerb, myAdverb) {
+  var result = "";
+  result +=
+    "The " + myAdjective + " " + myNoun + " " + myVerb + " to the store " + myAdverb;
+  return result;
+}
+console.log(worldBlanks("dog", "big", "ran", "quickly"));
+console.log(worldBlanks("bike", "slow", "flew", "slowly"))
+
+// Store multiple values with arrays
+
+var ourArray = ["John", 23];
+console.log(ourArray);
+
+//Nested Array
+
+var ourArray = [["The universe", 42], ["everything", 101010]];
+
+console.log(ourArray);
+

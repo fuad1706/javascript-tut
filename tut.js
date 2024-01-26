@@ -269,3 +269,126 @@ var ourArray = [["The universe", 42], ["everything", 101010]];
 
 console.log(ourArray);
 
+//Access Array Data with indexes
+
+var ourArray = [50,60,70];
+var ourData = ourArray[0];
+
+var myArray = [50,60,70]
+var myData = myArray[0];
+console.log(myData);
+
+//Modify Array Data with indexes
+var ourArray = [18,64,99];
+ourArray[1] = 45;
+console.log(ourArray);
+
+var myArray = [18,64,99];
+myArray[0] = 45;
+console.log(myArray)
+
+//Access Multi-domensional Arrays with indexes
+
+var myArray = [[1,2,3],[4,5,6],[7,8,9], [[10,11,12], 13, 14]];
+var myData = myArray[2][1];
+console.log(myData);
+
+// Manipulate Arrays with push()
+var ourArray = ["Stimpson", "J", "cat"];
+ourArray.push(["happy", "joy"]);
+console.log(ourArray);
+
+var myArray = [["John", 23],["cat", 2]];
+myArray.push(["dog", 3])
+console.log(myArray);
+
+//Manipulate Arrays with pop()
+var ourArray = [1,2,3];
+var removedFromOurArray = ourArray.pop();
+console.log(ourArray);
+
+var myArray = [["John", 23], ["cat", 2]];
+var removedFromMyArray = myArray.pop();
+console.log(myArray);
+
+//Manipulate Arrays with shift() it removed the first item instead of the last item
+var ourArray = ["Stimpson", "J", ["cat"]];
+var removedFromOurArray = ourArray.shift();
+console.log(ourArray);
+
+var myArray = [["John", 23], ["dog", 3]];
+var removedFromMyArray = myArray.shift();
+console.log(myArray);
+
+// Manipulate Arrayas with unshift() add to the begining of the array
+var ourArray = ["Stimpson", "j", "cat"];
+ourArray.shift(); 
+ourArray.unshift("Happy");
+console.log(ourArray);
+
+var myArray = [["John", 23], ["dog", 3]];
+myArray.shift();
+myArray.unshift(["Olofin", 208])
+console.log(myArray);
+
+// Shopping List
+
+var myList = [["cereal", 3], ["milk", 2], ["bananas", 3], ["juice", 2], ["eggs", 12]];
+
+// write reusable code with functions
+
+function ourReusableFunction() {
+
+  console.log("Heyya, World");
+}
+
+ourReusableFunction();
+
+function reusableFunction(){
+  console.log("Hi World");
+}
+
+reusableFunction();
+
+// Passing Values to Functions with Arguments
+function ourFunctionWithArgs(a, b){
+  console.log(a - b);
+}
+ourFunctionWithArgs(10, 5);
+
+function functionWithArgs(a, b){
+  console.log(a + b)
+}
+functionWithArgs(10, 5)
+
+//Global scope and functions
+
+//Local scope and functions
+
+//Global vs Local scope in function
+
+//Return a value from a function with return
+function minusSeven(num) {
+  return num - 7;
+}
+
+console.log(minusSeven(10));
+
+function mutFive(num) {
+  return num * 8;
+}
+
+console.log(mutFive(30));
+
+//understanding undefined value returned from a function
+var sum = 0;
+function addThree() {
+  sum = sum + 3;
+}
+
+function addFive(){
+  sum += 5;
+}
+
+//Assignment with a returned value
+

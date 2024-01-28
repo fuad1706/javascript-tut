@@ -786,7 +786,7 @@ console.log(chainToSwitch("bob"));
 
 // Returning boolean values from functions
 
-function isLess(a, b){
+function isLess(a, b) {
   /*if (a > b){
     return true
   }else{
@@ -806,9 +806,31 @@ function abTest(a, b) {
   }
   return Math.round(Math.pow(Math.sqrt(a) + Math.sqrt(b), 2));
 }
-console.log(abTest(2,2));
+console.log(abTest(2, 2));
 
 // Counting Cards
 
-
-
+var count = 0;
+function cc(card) {
+  switch (card) {
+    case 2:
+    case 3:
+    case 4:
+    case 5:
+    case 6:
+      count++;
+      break;
+    case 10:
+    case "J":
+    case "Q":
+    case "K":
+    case "A":
+      count--;
+      break;
+  }
+  var holdbet = 'Hold'
+  if (count > 0){
+    holdbet = 'Bet'
+  }
+  return count + " " + holdbet;
+}

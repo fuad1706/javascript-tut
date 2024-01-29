@@ -828,9 +828,145 @@ function cc(card) {
       count--;
       break;
   }
-  var holdbet = 'Hold'
-  if (count > 0){
-    holdbet = 'Bet'
+  var holdbet = "Hold";
+  if (count > 0) {
+    holdbet = "Bet";
   }
   return count + " " + holdbet;
+}
+
+cc(2);
+cc("K");
+cc(10);
+cc("K");
+cc("A");
+console.log(cc(4));
+
+//Build Javascript object
+//Example
+var ourDog = {
+  name: "Camper",
+  legs: 4,
+  tails: 1,
+  friends: [],
+};
+
+var myDog = {
+  name: "Quincy",
+  legs: 3,
+  tails: 2,
+  frineds: [],
+};
+
+//Accessing object properties with dot notation
+var testObj = {
+  hat: "ballcap",
+  shirt: "Jersey",
+  shoes: "cleats",
+};
+
+var hatValue = testObj.hat;
+var shirtValue = testObj.shirt;
+
+console.log(hatValue);
+
+//Accessing Object properties with bracket notation
+
+var testObj = {
+  "an entree": "hamburger",
+  "my side": "veggies",
+  "the drink": "water",
+};
+
+var entreeValue = testObj["an entree"];
+var drinkValue = testObj["the drink"];
+console.log(entreeValue);
+
+// Accessing objext properties with Variables
+var testObj = {
+  12: "Namath",
+  16: "Montana",
+  19: "Unitas",
+};
+
+var playerNumber = 12;
+var player = testObj[playerNumber];
+console.log(player);
+
+//Updating Object Properties
+
+var ourDog = {
+  name: "Camper",
+  legs: 4,
+  tails: 1,
+  friends: ["everything!"],
+};
+
+ourDog.name = "Happy Camper";
+
+console.log(ourDog.name);
+
+// Add new properties to an object
+var ourDog = {
+  name: "Camper",
+  legs: 4,
+  tails: 1,
+  friends: ["everything!"],
+};
+
+ourDog.bark = "bow-wow";
+
+var ourDog = {
+  name: "Happy Coder",
+  legs: 4,
+  tails: 1,
+  friends: ["freeCodeCamp Campers"],
+};
+myDog["bark"] = "woof!";
+console.log(ourDog);
+// console.log(myDog['bark']);
+
+//Delete properties from an object
+var ourDog = {
+  name: "Happy Coder",
+  legs: 4,
+  tails: 1,
+  friends: ["freeCodeCamp Campers"],
+  bark: "woof",
+};
+delete ourDog.tails;
+
+//Using Object for lookup
+function phoneticLookup(val) {
+  var result = "";
+var lookup = {
+  "alpha": "Adams",
+  "bravo": "Boston",
+  "charlie": "Chicago",
+  "delta": "Denver",
+  "echo": "Easy",
+  "foxtrot": "frankophone"
+};
+result = lookup[val];
+
+return result;
+  // switch (val) {
+    // case "alpha":
+      // result = "Adams";
+      // break;
+    // case "bravo":
+      // result = "Boston";
+      // break;
+    // case "charlie":
+      // result = "Chicago";
+      // break;
+    // case "delta":
+      // result = "Denver";
+      // break;
+    // case "echo":
+      // result = "Easy";
+      // break;
+    // case "foxtrot":
+      // result = "Frank";
+  // }
 }

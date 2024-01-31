@@ -944,7 +944,7 @@ var lookup = {
   "bravo": "Boston",
   "charlie": "Chicago",
   "delta": "Denver",
-  "echo": "Easy",
+  "echo": "Easybank",
   "foxtrot": "frankophone"
 };
 result = lookup[val];
@@ -970,3 +970,5 @@ return result;
       // result = "Frank";
   // }
 }
+
+

@@ -971,4 +971,10 @@ return result;
   // }
 }
 
+//Testing Object for properties
+var myObj = {
+  gift: "pony",
+  pet: "kitten",
+  bed: "sleigh"
+}
 

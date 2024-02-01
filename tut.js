@@ -939,35 +939,35 @@ delete ourDog.tails;
 //Using Object for lookup
 function phoneticLookup(val) {
   var result = "";
-var lookup = {
-  "alpha": "Adams",
-  "bravo": "Boston",
-  "charlie": "Chicago",
-  "delta": "Denver",
-  "echo": "Easybank",
-  "foxtrot": "frankophone"
-};
-result = lookup[val];
+  var lookup = {
+    alpha: "Adams",
+    bravo: "Boston",
+    charlie: "Chicago",
+    delta: "Denver",
+    echo: "Easybank",
+    foxtrot: "frankophone",
+  };
+  result = lookup[val];
 
-return result;
+  return result;
   // switch (val) {
-    // case "alpha":
-      // result = "Adams";
-      // break;
-    // case "bravo":
-      // result = "Boston";
-      // break;
-    // case "charlie":
-      // result = "Chicago";
-      // break;
-    // case "delta":
-      // result = "Denver";
-      // break;
-    // case "echo":
-      // result = "Easy";
-      // break;
-    // case "foxtrot":
-      // result = "Frank";
+  // case "alpha":
+  // result = "Adams";
+  // break;
+  // case "bravo":
+  // result = "Boston";
+  // break;
+  // case "charlie":
+  // result = "Chicago";
+  // break;
+  // case "delta":
+  // result = "Denver";
+  // break;
+  // case "echo":
+  // result = "Easy";
+  // break;
+  // case "foxtrot":
+  // result = "Frank";
   // }
 }
 
@@ -975,6 +975,150 @@ return result;
 var myObj = {
   gift: "pony",
   pet: "kitten",
-  bed: "sleigh"
-}
+  bed: "sleigh",
+};
 
+function checkObj(checkProp) {
+  if (myObj.hasOwnProperty(checkProp)) {
+    return myObj[checkProp];
+  } else {
+    return "Not Found";
+  }
+}
+console.log(checkObj("food"));
+
+//Manipulating complex objects
+var myMusic = [
+  {
+    artist: "Billy Joel",
+    title: "Piano Man",
+    release_year: 1973,
+    formats: ["CD", "8T", "LP"],
+    gold: true,
+  },
+  {
+    artist: "Beau Carnes",
+    title: "Cereal Man",
+    release_year: 2003,
+    formats: [
+      "Youtube video",
+      "spotify",
+      "audio mack",
+      "deezer",
+      "apple music",
+    ],
+  },
+];
+console.log(myMusic[1]);
+
+//Accessing Nested Objects
+var myStorage = {
+  car: {
+    inside: {
+      "glove box": "maps",
+      "passenger seat": "crumbs",
+    },
+    outside: {
+      trunk: "jack",
+    },
+  },
+};
+var handGloveContents = myStorage.car.inside["passenger seat"];
+console.log(handGloveContents);
+
+//Accessing Nested Arrays
+var myPlants = [
+  {
+    type: "flowers",
+    list: ["rose", "tulip", "dandelion"],
+  },
+  {
+    type: "trees",
+    list: ["fir", "pine", "birch"],
+  },
+];
+var secondTree = myPlants[1].list[1];
+console.log(secondTree);
+
+//Record Collection
+var collection = {
+  2548: {
+    album: "Slippery When wet",
+    artist: "Bon Jovi",
+    tracks: ["Let It Rock", "You Give Love a Bad Name"],
+  },
+  2468: {
+    album: "1999",
+    artist: "Prince",
+    tracks: ["1999", "Little Red Corvette"],
+  },
+  1245: {
+    artist: "Robert Palmer",
+    tracks: [],
+  },
+  5439: {
+    album: "ABBA Gold",
+  },
+};
+
+var collectionCopy = JSON.parse(JSON.stringify(collection));
+
+function updateRecords(id, prop, value) {
+  if (value === ""){
+    delete collection[id][prop];
+  }else if (prop === "tracks"){
+    collection[id][prop] = collection[id][prop] || [];
+    collection[id][prop].push(value); 
+  }else{
+    collection[id][prop] = value;
+  }
+  return collection;
+}
+console.log(updateRecords(2468, "tracks", "test"));
+console.log(updateRecords(5439, "artist", "ABBA"));
+
+//Iterate with while loops //loops allow you to run code multiple times
+var myArray = [];
+var i = 0;
+while (i < 5) {
+  myArray.push(i);
+  i++;
+}
+console.log(myArray);
+
+//iterate with for loop
+var myArray = [];
+for (var i = 1; i < 6; i++){
+  myArray.push(i);
+}
+console.log(myArray);
+
+//iterate odd number with a for loop
+var myArray = [];
+for (var i = 1; i < 10; i += 2) {
+  myArray.push(i);
+}
+console.log(myArray);
+
+//count backwards with a for loop
+//even number
+var ourArray = [];
+for (var i = 10; i > 0; i -= 2) {
+  ourArray.push(i);
+}
+console.log(ourArray)
+
+//odd number
+var myArray = [];
+for (var i = 9; i > 0; i -=2 ){
+  myArray.push(i);
+}
+console.log(myArray)
+
+//Iterate through an array with a for loop
+var myArr = [2, 3, 4, 5, 6];
+var total = 0;
+for (var i = 0; i < myArr.length; i++){
+  total += myArr[i];
+}
+console.log(total);

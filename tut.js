@@ -1064,12 +1064,12 @@ var collection = {
 var collectionCopy = JSON.parse(JSON.stringify(collection));
 
 function updateRecords(id, prop, value) {
-  if (value === ""){
+  if (value === "") {
     delete collection[id][prop];
-  }else if (prop === "tracks"){
+  } else if (prop === "tracks") {
     collection[id][prop] = collection[id][prop] || [];
-    collection[id][prop].push(value); 
-  }else{
+    collection[id][prop].push(value);
+  } else {
     collection[id][prop] = value;
   }
   return collection;
@@ -1088,7 +1088,7 @@ console.log(myArray);
 
 //iterate with for loop
 var myArray = [];
-for (var i = 1; i < 6; i++){
+for (var i = 1; i < 6; i++) {
   myArray.push(i);
 }
 console.log(myArray);
@@ -1106,19 +1106,152 @@ var ourArray = [];
 for (var i = 10; i > 0; i -= 2) {
   ourArray.push(i);
 }
-console.log(ourArray)
+console.log(ourArray);
 
 //odd number
 var myArray = [];
-for (var i = 9; i > 0; i -=2 ){
+for (var i = 9; i > 0; i -= 2) {
   myArray.push(i);
 }
-console.log(myArray)
+console.log(myArray);
 
 //Iterate through an array with a for loop
 var myArr = [2, 3, 4, 5, 6];
 var total = 0;
-for (var i = 0; i < myArr.length; i++){
+for (var i = 0; i < myArr.length; i++) {
   total += myArr[i];
 }
 console.log(total);
+
+//Nesting for Loops
+function multiplyAll(arr) {
+  var product = 1;
+
+  for (var i = 0; i < arr.length; i++) {
+    for (var j = 0; j < arr[i].length; j++) {
+      product *= arr[i][j];
+    }
+  }
+  return product;
+}
+var product = multiplyAll([
+  [1, 2],
+  [3, 4],
+  [5, 6, 7],
+]);
+console.log(product);
+
+//Iterate with do... while loops
+var myArray = [];
+var i = 10;
+
+do {
+  myArray.push(i);
+  i++;
+} while (i < 5);
+
+console.log(i, myArray);
+
+//profile lookup
+
+var contacts = [
+  {
+    firstName: "Akira",
+    lastName: "Laine",
+    number: "0543236543",
+    likes: ["Pizza", "Coding", "Brownie Points"],
+  },
+  {
+    firstName: "Harry",
+    lastName: "Potter",
+    number: "0994372684",
+    likes: ["Hogwarts", "Magic", "Hagrid"],
+  },
+  {
+    firstName: "Sherlock",
+    lastName: "Holmes",
+    number: "0487345643",
+    likes: ["Intriguing Cases", "Violin"],
+  },
+  {
+    firstName: "Kristian",
+    lastName: "Vos",
+    number: "unknown",
+    likes: ["JavaScript", "Gaming", "Foxes"],
+  },
+];
+function lookUpProfile(name, prop) {
+  for (var i = 0; i < contacts.length; i++) {
+    if (contacts[i].firstName === name) {
+      return contacts[i][prop] || "No such property";
+    }
+  }
+  return "No such contact";
+}
+var data = lookUpProfile("dan", "lastName");
+console.log(data)
+
+// Generate Random Fractions
+function randomFraction(){
+  return Math.random();
+}
+console.log(randomFraction());
+
+// Generate random whole numbers
+
+var randomNumberBetween0and19 = Math.floor(Math.random() * 20);
+
+function randomWholeNum() {
+  return Math.floor(Math.random() * 20);
+}
+console.log(randomWholeNum());
+
+// Generate Random whole Number within Range
+function randomRange(myMin, myMax){
+  return Math.floor(Math.random() * (myMax - myMin + 1)) +myMin;
+}
+var myRandom = randomRange(5, 15);
+
+console.log(myRandom);
+
+//Use the parseInt Function
+function convertToInteger(str){
+  return parseInt(str);
+}
+console.log(convertToInteger("56"));
+
+// use the parseInt Function with a Radix
+function convertToInteger(str){
+  return parseInt(str, 2)
+}
+console.log(convertToInteger("10001"));
+
+//Use the conditional (ternary) operator
+// condition ? stattement-if-true: statement-if-false;
+
+function checkEqual(a, b){
+  return a === b ? true : false;
+}
+
+checkEqual(2, 1);
+console.log(checkEqual());
+
+//using multiple ternary operator
+function checkSign(num) {
+  return num > 0 ? "positive" : num < 0 ? "negative" : "zero"
+}
+console.log(checkSign(0))
+
+// Difference Between the var and let Keywords
+// let does not allow you to declare a variable twice
+let catName = "Quincy";
+let quote;
+
+catName = "Beau";
+
+function catTalk(){
+  "use strict";
+
+  catName = "Oliver";
+  quote = catName + " says Meow!"
+}

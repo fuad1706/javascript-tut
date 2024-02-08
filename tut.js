@@ -274,7 +274,7 @@ console.log(ourArray);
 
 var ourArray = [
   ["The universe", 42],
-  ["everything", 101010],
+  ["everything", 101010]
 ];
 
 console.log(ourArray);
@@ -609,6 +609,7 @@ function testElseIf(val) {
 console.log(testElseIf(4));
 
 //Logical order in if else statement
+
 function orderMyLogic(val) {
   if (val < 5) {
     return "Less than 5";
@@ -621,6 +622,7 @@ function orderMyLogic(val) {
 console.log(orderMyLogic(3));
 
 //Chaining If else statements
+
 function testSize(num) {
   if (num < 5) {
     return "Tiny";
@@ -1253,5 +1255,32 @@ function catTalk(){
   "use strict";
 
   catName = "Oliver";
-  quote = catName + " says Mow!"
+  quote = catName + " says Meow!"
 }
+
+//compare scope of the var and let keywords
+// Declare  read-only variable with the const keyword
+//mutate an array declared with const
+const s = [5, 7, 2];
+function editInPlace(){
+  "use strict";
+  //s = [2, 5, 7];
+  s[0] = 2;
+  s[1] = 5;
+  s[2] = 7;
+}
+editInPlace();
+console.log(s)
+
+//Prevent Object Mutation
+//use arrow function to write concise anonymous function
+const magic = () => new Date();
+
+// write arrow function with parameters
+//var myConcat = function(arr1, arr2) {
+ // return arr1.concat(arr2);
+//};
+const myConcat = (arr1, arr2) => arr1.concat(arr2);
+console.log(myConcat([1,2], [3, 4, 5]));
+
+//write higher order arrow functions

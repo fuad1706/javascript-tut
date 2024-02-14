@@ -1284,3 +1284,7 @@ const myConcat = (arr1, arr2) => arr1.concat(arr2);
 console.log(myConcat([1,2], [3, 4, 5]));
 
 //write higher order arrow functions
+
+
+let mustiArray = [1, 2, 3]
+console.log(mustiArray.push(4) && mustiArray.pop());

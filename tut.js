@@ -50,7 +50,7 @@
 // //var titleCaseOver;
 
 // // Assignments
-// //studlyCapVar = 10;
+// //studlyCapVar = 10; 
 // //properCamelCase = "A String"
 // //titleCaseOver = 9000;
 
@@ -225,19 +225,19 @@ CODE OUTPUT
 //var lastLetterOfFirstName = firstName[firstName.length - 1];
 //console.log(lastLetterOfFirstName);
 
-//var firstName = "Adebakin";
-//var secondLetterOfFirstName = firstName[firstName.length - 6];
-//console.log(secondLetterOfFirstName);
-
+// var firstName = "Adebakin";
+// var secondLetterOfFirstName = firstName[firstName.length - 7];
+// console.log(secondLetterOfFirstName);
+// 
 // Bracket Notation to find Nth-to-Last Character in String
 
-//var firstName = "Ada";
-//var thirdToLastLetterOfFirstName = firstName[firstName.length - 3];
-//console.log(thirdToLastLetterOfFirstName);
+// var firstName = "Ada";
+// var thirdToLastLetterOfFirstName = firstName[firstName.length - 1];
+// console.log(thirdToLastLetterOfFirstName);
 
-//var lastName = "Lovelace";
-//var secondToLastLetterOfLastName = lastName[lastName.length - 2];
-//console.log(secondToLastLetterOfLastName);
+// var lastName = "Lovelace";
+// var secondToLastLetterOfLastName = lastName[lastName.length - 2];
+// console.log(secondToLastLetterOfLastName);
 
 // let myName = "Fuad";
 // let surName = "Adebakin";
